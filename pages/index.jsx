@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import Card from "../components/card";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import Seo from "../components/seo";
@@ -7,20 +9,22 @@ export default function Home() {
   return (
     <div className="font-body bg-fondos">
       <Seo page="" />
-      <Header />
-      <main className="text-blanco mx-4 my-28">
-        <h1 className="text-center text-3xl leading-relaxed">
+      <Header page="home" />
+      <main className="text-blanco mx-4 lg:mx-10 my-28 lg:mt-40 lg:mb-60">
+        <h1 className="text-center md:font-bold text-3xl lg:text-5xl leading-relaxed lg:leading-normal">
           Hi I&#39;m <span className="text-primario">Ditya Athallah.</span>
           <br />
           Frontend Developer
         </h1>
-        <p className="text-center my-1">
+        <p className="text-center my-1 lg:my-5">
           Welcome to my Web Portofolio! <span>👋</span>
         </p>
-        <div className="flex flex-col justify-center items-center gap-5 mt-5">
-          <button className="bg-primario w-36 h-12 rounded hover:opacity-80 transition">
-            See Projects
-          </button>
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-5 mt-5 lg:mt-10">
+          <Link href="/projects">
+            <a className="bg-primario w-36 h-12 rounded hover:opacity-80 transition flex justify-center items-center">
+              See Projects
+            </a>
+          </Link>
           <a
             className="border w-36 h-12 rounded hover:opacity-80 transition flex items-center justify-center gap-2"
             target="_blank"
@@ -45,40 +49,123 @@ export default function Home() {
           </a>
         </div>
       </main>
-      <div className="mx-4 mt-40 mb-5">
-        <div className="bg-rellenos border border-bordes w-full rounded text-blanco p-4 flex flex-col gap-4">
-          <div className="relative w-[294px] h-[297px] overflow-hidden rounded justify-self-center self-center">
+      <div className="mx-4 lg:mx-10 mt-40 mb-40 flex justify-center items-center">
+        <div className="bg-rellenos border border-bordes w-full sm:max-w-lg md:max-w-xl lg:max-w-4xl rounded text-blanco p-4 flex flex-col gap-4 md:flex-row">
+          <div className="relative w-full sm:w-[294px] h-[297px] overflow-hidden rounded justify-self-center self-center">
             <Image
               src="/foto-diri/foto.jpeg"
               alt="Ditya's Photo"
               layout="fill"
+              objectFit="cover"
             />
           </div>
-          <h2 className="text-xl mt-6">About Me</h2>
-          <article>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
-            voluptas saepe odio nisi. Voluptate magni recusandae harum quaerat
-            omnis eligendi dolores placeat. Accusamus repellendus rem odio
-            eveniet dolore, doloremque vel.
-          </article>
-          <a className="border w-36 h-12 rounded hover:opacity-80 transition flex items-center justify-center gap-2">
-            Read More
-            <svg
-              width="12"
-              height="10"
-              viewBox="0 0 12 10"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.16667 0.916626L11.25 4.99996M11.25 4.99996L7.16667 9.08329M11.25 4.99996L0.75 4.99996"
-                stroke="white"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </a>
+          <div className="md:w-3/4">
+            <h2 className="text-xl mt-6 md:mt-0 md:mb-6">About Me</h2>
+            <article>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
+              voluptas saepe odio nisi. Voluptate magni recusandae harum quaerat
+              omnis eligendi dolores placeat. Accusamus repellendus rem odio
+              eveniet dolore, doloremque vel.
+            </article>
+            <Link href="/about">
+              <a className="mt-6 border w-36 h-12 rounded hover:opacity-80 transition flex items-center justify-center gap-2">
+                Read More
+                <svg
+                  width="12"
+                  height="10"
+                  viewBox="0 0 12 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.16667 0.916626L11.25 4.99996M11.25 4.99996L7.16667 9.08329M11.25 4.99996L0.75 4.99996"
+                    stroke="white"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="mx-4 lg:px-10 mt-20 mb-4 text-blanco flex justify-center">
+        <div className="max-w-lg md:max-w-2xl lg:max-w-5xl w-full">
+          <h2 className="text-xl mt-6">My Experiences</h2>
+          <Card
+            title="Guía de estilos y maquetas"
+            subtitle="Web - Iglesia fuente de poder"
+            photoSrc="/porto/default.png"
+            photoAlt="Portofolio 1"
+          />
+          <div className="w-full flex justify-center items-center">
+            <Link href="experience">
+              <a className="bg-primario w-full lg:w-64 h-12 mt-6 rounded hover:opacity-80 transition flex gap-5 justify-center items-center">
+                See all my experiences
+                <svg
+                  width="12"
+                  height="11"
+                  viewBox="0 0 12 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.16667 1.50366L11.25 5.587M11.25 5.587L7.16667 9.67033M11.25 5.587L0.75 5.587"
+                    stroke="white"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="mx-4 lg:px-10 mt-20 mb-4 text-blanco flex justify-center">
+        <div className="max-w-lg md:max-w-2xl lg:max-w-5xl w-full">
+          <h2 className="text-xl mt-6">My Projects</h2>
+          <Card
+            title="Guía de estilos y maquetas"
+            subtitle="Web - Iglesia fuente de poder"
+            photoSrc="/porto/default.png"
+            photoAlt="Portofolio 1"
+          />
+          <Card
+            title="Guía de estilos y maquetas"
+            subtitle="Web - Iglesia fuente de poder"
+            photoSrc="/porto/default.png"
+            photoAlt="Portofolio 1"
+          />
+          <Card
+            title="Guía de estilos y maquetas"
+            subtitle="Web - Iglesia fuente de poder"
+            photoSrc="/porto/default.png"
+            photoAlt="Portofolio 1"
+          />
+          <div className="w-full flex justify-center items-center">
+            <Link href="/projects">
+              <a className="bg-primario w-full lg:w-64 h-12 mt-6 rounded hover:opacity-80 transition flex gap-5 justify-center items-center">
+                See my other projects
+                <svg
+                  width="12"
+                  height="11"
+                  viewBox="0 0 12 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.16667 1.50366L11.25 5.587M11.25 5.587L7.16667 9.67033M11.25 5.587L0.75 5.587"
+                    stroke="white"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
       <Footer />
