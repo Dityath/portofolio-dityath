@@ -97,14 +97,16 @@ export default function Home() {
           <Card
             title="Mechtech.idn, Surabaya"
             subtitle="As Web Designer Intern, November 2021 - February 2022"
-            photoSrc="/porto/default.png"
+            photoSrc="/porto/MechTech.png"
             photoAlt="Portofolio 1"
+            href="/experience/detail"
           />
           <Card
             title="RPL-GDC Laboratory, Bandung"
             subtitle="As Frontend Developer, September 2021 - Present"
-            photoSrc="/porto/default.png"
+            photoSrc="/porto/RPLGDC.png"
             photoAlt="Portofolio 1"
+            href="/experience/detail"
           />
           <div className="w-full flex justify-center items-center">
             <Link href="experience">
