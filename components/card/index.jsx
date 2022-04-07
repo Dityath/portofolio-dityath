@@ -14,9 +14,10 @@ function Card({ title, subtitle, photoSrc, photoAlt, href }) {
         <h3 className="text-sm font-bold md:text-base lg:text-xl">{title}</h3>
         <p className="text-xs md:text-sm lg:text-lg">{subtitle}</p>
       </div>
-      <div className="w-full h-full relative">
+      <div className="w-full h-full relative z-10">
         <Image src={photoSrc} alt={photoAlt} layout="fill" objectFit="cover" />
       </div>
+      <div className="bg-rellenos animate-pulse w-full h-full z-0"></div>
     </div>
   );
 }
