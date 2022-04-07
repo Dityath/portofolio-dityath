@@ -136,22 +136,18 @@ export default function Home() {
         <div className="max-w-lg md:max-w-2xl lg:max-w-5xl w-full">
           <h2 className="text-xl mt-6">My Projects</h2>
           <Card
-            title="Guía de estilos y maquetas"
-            subtitle="Web - Iglesia fuente de poder"
-            photoSrc="/porto/default.png"
+            title="Motion Website"
+            subtitle="Website Development - As Frontend Developer"
+            photoSrc="/porto/Motionweb.png"
             photoAlt="Portofolio 1"
+            href="/projects/detail"
           />
           <Card
-            title="Guía de estilos y maquetas"
-            subtitle="Web - Iglesia fuente de poder"
-            photoSrc="/porto/default.png"
+            title="Testcov.id"
+            subtitle="Website Development - As UI/UX Designer"
+            photoSrc="/porto/Testcovid.png"
             photoAlt="Portofolio 1"
-          />
-          <Card
-            title="Guía de estilos y maquetas"
-            subtitle="Web - Iglesia fuente de poder"
-            photoSrc="/porto/default.png"
-            photoAlt="Portofolio 1"
+            href="/projects/detail"
           />
           <div className="w-full flex justify-center items-center">
             <Link href="/projects">
