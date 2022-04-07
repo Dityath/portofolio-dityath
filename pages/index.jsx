@@ -62,10 +62,11 @@ export default function Home() {
           <div className="md:w-3/4">
             <h2 className="text-xl mt-6 md:mt-0 md:mb-6">About Me</h2>
             <article>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
-              voluptas saepe odio nisi. Voluptate magni recusandae harum quaerat
-              omnis eligendi dolores placeat. Accusamus repellendus rem odio
-              eveniet dolore, doloremque vel.
+              Hi, I&#39;m Ditya Athallah. I&#39;m a ungraduate college student
+              at Telkom University majoring in Informatics International Class.
+              Interested in software engineering since 2018, especially in web
+              development. I have learned web development for 2 years. I usually
+              work on the front-end side of the development...
             </article>
             <Link href="/about">
               <a className="mt-6 border w-36 h-12 rounded hover:opacity-80 transition flex items-center justify-center gap-2">
@@ -94,8 +95,14 @@ export default function Home() {
         <div className="max-w-lg md:max-w-2xl lg:max-w-5xl w-full">
           <h2 className="text-xl mt-6">My Experiences</h2>
           <Card
-            title="Guía de estilos y maquetas"
-            subtitle="Web - Iglesia fuente de poder"
+            title="Mechtech.idn, Surabaya"
+            subtitle="As Web Designer Intern, November 2021 - February 2022"
+            photoSrc="/porto/default.png"
+            photoAlt="Portofolio 1"
+          />
+          <Card
+            title="RPL-GDC Laboratory, Bandung"
+            subtitle="As Frontend Developer, September 2021 - Present"
             photoSrc="/porto/default.png"
             photoAlt="Portofolio 1"
           />
