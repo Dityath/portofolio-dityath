@@ -25,6 +25,7 @@ function Footer() {
             <a
               className="hover:opacity-80 transition"
               href="mailto:dityaathallah107@gmail.com"
+              aria-label="Contact By Email Button"
             >
               Email
             </a>
@@ -33,6 +34,7 @@ function Footer() {
               href="https://www.linkedin.com/in/dityath/"
               target="_blank"
               rel="noreferrer"
+              aria-label="Linkedin Contact Button"
             >
               Linkedin
             </a>
@@ -45,6 +47,7 @@ function Footer() {
                 href="https://www.linkedin.com/in/dityath/"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Linkedin Social Button"
               >
                 <svg
                   width="24"
@@ -60,6 +63,7 @@ function Footer() {
                 href="https://dribbble.com/bellezzasky"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Dribbble Social Button"
               >
                 <svg
                   width="25"
@@ -79,6 +83,7 @@ function Footer() {
                 href="https://www.instagram.com/dityath/"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Instagram Social Button"
               >
                 <svg
                   width="25"
@@ -98,6 +103,7 @@ function Footer() {
                 href="https://github.com/Dityath"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Github Social Button"
               >
                 <svg
                   width="25"
