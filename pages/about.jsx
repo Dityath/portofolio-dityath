@@ -34,15 +34,16 @@ function About() {
             <article>
               Hi, I&#39;m Ditya Athallah. I&#39;m 21th years old Frontend
               Developer based in Indonesia (Semarang and Bandung), with
-              javascript and React.js speciality. I was a college student at
-              Telkom University majoring in Informatics International Class. But
+              javascript and React.js speciality. I&#39;m college student at
+              Telkom University majoring in Informatics International Class.
+              {/*  But
               unfortunately, I can&#39;t graduate and have my degree there due
               to economic situation. Kinda sad but I need to move on and keep
-              improving myself to go further. I have big Interest in software
-              engineering since 2018, especially in web development. I have
-              learned web development for 2 years. Well, actually I have falling
-              in love with programming language since I was in elementary
-              school, I love it so much much.
+              improving myself to go further.  */}{" "}
+              I have big Interest in software engineering since 2018, especially
+              in web development. I have learned web development for 2 years.
+              Well, actually I have falling in love with programming language
+              since I was in elementary school, I love it so much much.
               <br />
               <br />
               Besides being Interested in software engineering, I also like
