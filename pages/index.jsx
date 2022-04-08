@@ -1,16 +1,39 @@
 import Image from "next/image";
 import Link from "next/link";
+
+import { useEffect } from "react";
+
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 import Card from "../components/card";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import Seo from "../components/seo";
 
 export default function Home() {
+  const { ref, inView } = useInView();
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        y: 0,
+        opacity: 1,
+      });
+    }
+  }, [animation, inView]);
+
   return (
     <div className="font-body bg-fondos">
       <Seo page="" />
       <Header page="home" />
-      <main className="text-blanco mx-4 lg:mx-10 my-28 lg:mt-40 lg:mb-60">
+      <motion.main
+        initial={{ y: "10vh", opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ type: "spring", duration: 2.6, bounce: 0 }}
+        className="text-blanco mx-4 lg:mx-10 my-28 lg:mt-40 lg:mb-60"
+      >
         <h1 className="text-center md:font-bold text-3xl lg:text-5xl leading-relaxed lg:leading-normal">
           Hi I&#39;m <span className="text-primario">Ditya Athallah.</span>
           <br />
@@ -48,8 +71,14 @@ export default function Home() {
             Download CV
           </a>
         </div>
-      </main>
-      <div className="mx-4 lg:mx-10 mt-40 mb-40 flex justify-center items-center">
+      </motion.main>
+      <motion.section
+        ref={ref}
+        initial={{ y: "10vh", opacity: 0 }}
+        animate={animation}
+        transition={{ type: "spring", duration: 2.6, bounce: 0 }}
+        className="mx-4 lg:mx-10 mt-40 mb-40 flex justify-center items-center"
+      >
         <div className="bg-rellenos border border-bordes w-full sm:max-w-lg md:max-w-xl lg:max-w-4xl rounded text-blanco p-4 flex flex-col gap-4 md:flex-row">
           <div className="relative w-full sm:w-[294px] h-[297px] overflow-hidden rounded justify-self-center self-center">
             <Image
@@ -90,8 +119,8 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </div>
-      <div className="mx-4 lg:px-10 mt-20 mb-4 text-blanco flex justify-center">
+      </motion.section>
+      <section className="mx-4 lg:px-10 mt-20 mb-4 text-blanco flex justify-center">
         <div className="max-w-lg md:max-w-2xl lg:max-w-5xl w-full">
           <h2 className="text-xl mt-6">My Experiences</h2>
           <Card
@@ -131,8 +160,8 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </div>
-      <div className="mx-4 lg:px-10 mt-20 mb-4 text-blanco flex justify-center">
+      </section>
+      <section className="mx-4 lg:px-10 mt-20 mb-4 text-blanco flex justify-center">
         <div className="max-w-lg md:max-w-2xl lg:max-w-5xl w-full">
           <h2 className="text-xl mt-6">My Projects</h2>
           <Card
@@ -172,7 +201,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </div>
+      </section>
       <Footer />
     </div>
   );

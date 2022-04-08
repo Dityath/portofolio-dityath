@@ -1,12 +1,32 @@
 import React from "react";
+import { useEffect } from "react";
+
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 import Image from "next/image";
 import { useRouter } from "next/router";
 
 function Card({ title, subtitle, photoSrc, photoAlt, href }) {
   const router = useRouter();
+  const { ref, inView } = useInView();
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        y: 0,
+        opacity: 1,
+      });
+    }
+  }, [animation, inView]);
 
   return (
-    <div
+    <motion.div
+      ref={ref}
+      initial={{ y: "10vh", opacity: 0 }}
+      animate={animation}
+      transition={{ type: "spring", duration: 2.6, bounce: 0 }}
       className="w-full h-36 sm:h-44 md:h-60 lg:h-[534px] mt-6 relative rounded overflow-hidden"
       onClick={() => router.push(href)}
     >
@@ -18,7 +38,7 @@ function Card({ title, subtitle, photoSrc, photoAlt, href }) {
         <Image src={photoSrc} alt={photoAlt} layout="fill" objectFit="cover" />
       </div>
       <div className="bg-rellenos animate-pulse w-full h-full z-0"></div>
-    </div>
+    </motion.div>
   );
 }
 
