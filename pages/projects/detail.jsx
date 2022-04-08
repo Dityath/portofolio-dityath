@@ -20,7 +20,6 @@ function Detail() {
           </a>
         </Link>
       </div>
-      <Footer />
     </Layout>
   );
 }
