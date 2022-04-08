@@ -1,14 +1,11 @@
 import React from "react";
 import Card from "../../components/card";
 import Footer from "../../components/footer";
-import Header from "../../components/header";
-import Seo from "../../components/seo";
+import Layout from "../../components/layout";
 
 function Projects() {
   return (
-    <div className="font-body bg-fondos">
-      <Seo page="Projects" />
-      <Header page="projects" />
+    <Layout page="Projects">
       <div className="mx-4 lg:px-10 mt-20 mb-4 text-blanco flex justify-center">
         <div className="max-w-lg md:max-w-2xl lg:max-w-5xl w-full">
           <h2 className="text-4xl mt-6 font-bold">My Projects</h2>
@@ -44,7 +41,7 @@ function Projects() {
         </div>
       </div>
       <Footer />
-    </div>
+    </Layout>
   );
 }
 

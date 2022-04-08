@@ -27,7 +27,7 @@ function Header({ page }) {
           <Link href="/">
             <a
               className={
-                page == "home"
+                page == "Home"
                   ? "underline decoration-primario decoration-2 underline-offset-8 hover:opacity-80 transition"
                   : "hover:opacity-80 transition"
               }
@@ -38,7 +38,7 @@ function Header({ page }) {
           <Link href="/about">
             <a
               className={
-                page == "about"
+                page == "About"
                   ? "underline decoration-primario decoration-2 underline-offset-8 hover:opacity-80 transition"
                   : "hover:opacity-80 transition"
               }
@@ -49,7 +49,7 @@ function Header({ page }) {
           <Link href="/experience">
             <a
               className={
-                page == "experience"
+                page == "Experience"
                   ? "underline decoration-primario decoration-2 underline-offset-8 hover:opacity-80 transition"
                   : "hover:opacity-80 transition"
               }
@@ -60,7 +60,7 @@ function Header({ page }) {
           <Link href="/projects">
             <a
               className={
-                page == "projects"
+                page == "Projects"
                   ? "underline decoration-primario decoration-2 underline-offset-8 hover:opacity-80 transition"
                   : "hover:opacity-80 transition"
               }
@@ -71,7 +71,7 @@ function Header({ page }) {
           <Link href="/blog">
             <a
               className={
-                page == "blog"
+                page == "Blog"
                   ? "underline decoration-primario decoration-2 underline-offset-8 hover:opacity-80 transition"
                   : "hover:opacity-80 transition"
               }

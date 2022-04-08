@@ -1,14 +1,10 @@
 import Link from "next/link";
 import React from "react";
-import Footer from "../components/footer";
-import Header from "../components/header";
-import Seo from "../components/seo";
+import Layout from "../components/layout";
 
 function Custom404() {
   return (
-    <div className="font-body bg-fondos">
-      <Header />
-      <Seo page="404 Not Found" />
+    <Layout>
       <div className="flex flex-col gap-10 justify-center items-center h-screen text-blanco">
         <div className="text-center">
           <h1 className="text-3xl font-bold">
@@ -22,8 +18,7 @@ function Custom404() {
           </a>
         </Link>
       </div>
-      <Footer />
-    </div>
+    </Layout>
   );
 }
 

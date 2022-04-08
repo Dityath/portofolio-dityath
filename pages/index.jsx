@@ -7,9 +7,8 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import Card from "../components/card";
-import Footer from "../components/footer";
-import Header from "../components/header";
-import Seo from "../components/seo";
+
+import Layout from "../components/layout";
 
 export default function Home() {
   const { ref, inView } = useInView();
@@ -25,9 +24,7 @@ export default function Home() {
   }, [animation, inView]);
 
   return (
-    <div className="font-body bg-fondos">
-      <Seo page="" />
-      <Header page="home" />
+    <Layout page={"Home"}>
       <motion.main
         initial={{ y: "10vh", opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -202,7 +199,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Footer />
-    </div>
+    </Layout>
   );
 }

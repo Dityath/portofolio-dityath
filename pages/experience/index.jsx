@@ -2,13 +2,12 @@ import React from "react";
 import Card from "../../components/card";
 import Footer from "../../components/footer";
 import Header from "../../components/header";
+import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 
 function Experience() {
   return (
-    <div className="font-body bg-fondos">
-      <Seo page="Experience" />
-      <Header page="experience" />
+    <Layout page="Experience">
       <div className="mx-4 lg:px-10 mt-20 mb-4 text-blanco flex justify-center">
         <div className="max-w-lg md:max-w-2xl lg:max-w-5xl w-full">
           <h2 className="text-4xl mt-6 font-bold">My Experiences</h2>
@@ -50,8 +49,7 @@ function Experience() {
           />
         </div>
       </div>
-      <Footer />
-    </div>
+    </Layout>
   );
 }
 

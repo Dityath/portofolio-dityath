@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function SmallCard({ image, title, desc }) {
   return (
-    <div className="bg-rellenos w-full rounded-lg p-5">
+    <div className="bg-rellenos w-full h-full rounded-lg p-5">
       <div className="relative w-14 h-14">
         <Image src={image} alt="logo" layout="fill" objectFit="contain" />
       </div>

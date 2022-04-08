@@ -1,14 +1,12 @@
 import React from "react";
-import Header from "../../components/header";
-import Seo from "../../components/seo";
+
 import Link from "next/link";
 import Footer from "../../components/footer";
+import Layout from "../../components/layout";
 
 function Detail() {
   return (
-    <div className="font-body bg-fondos">
-      <Seo page="Detail" />
-      <Header page="projects" />
+    <Layout page="Projects">
       <div className="flex flex-col gap-10 justify-center items-center h-screen text-blanco">
         <div className="text-center">
           <h1 className="text-3xl font-bold">
@@ -23,7 +21,7 @@ function Detail() {
         </Link>
       </div>
       <Footer />
-    </div>
+    </Layout>
   );
 }
 
