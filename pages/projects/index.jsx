@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "../../components/card";
-import Footer from "../../components/footer";
 import Layout from "../../components/layout";
 
 function Projects() {
@@ -40,7 +39,6 @@ function Projects() {
           />
         </div>
       </div>
-      <Footer />
     </Layout>
   );
 }
