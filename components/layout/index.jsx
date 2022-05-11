@@ -7,6 +7,7 @@ import Footer from "../footer";
 import Seo from "../seo";
 
 import { motion } from "framer-motion";
+import { Scroll } from "scrollex";
 
 function Layout({ page, children }) {
   const router = useRouter();
