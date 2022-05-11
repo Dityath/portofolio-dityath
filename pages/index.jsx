@@ -15,24 +15,24 @@ const springs = {
   translateY: {
     damping: 100,
     stiffness: 1200,
-    mass: 8,
+    mass: 20,
   },
 };
 
 const keyframes = {
   container: ({ maxScrollPosition }) => ({
-    12000: {
+    0: {
       translateY: 50,
     },
-    10: {
+    [maxScrollPosition]: {
       translateY: -50,
     },
   }),
   item: ({ data }) => ({
-    [data.index * 350]: {
+    [data.index * 150]: {
       translateY: 35,
     },
-    [data.index * 350 + 400]: {
+    [data.index * 150 + 400]: {
       translateY: -35,
     },
   }),
@@ -81,7 +81,7 @@ export default function Home() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ type: "spring", duration: 1, bounce: 0.5 }}
         >
-          <Scroll.Section className="text-blanco mx-4 lg:mx-10 my-28 h-60 lg:mt-48">
+          <Scroll.Section className="text-blanco my-28 h-96 mt-40 lg:h-60 lg:mt-48 2xl:h-[30rem] 2xl:mt-96">
             <Scroll.Item keyframes={keyframes.heading}>
               <h1 className="text-center md:font-bold text-3xl lg:text-7xl leading-relaxed lg:leading-normal">
                 Hi I&#39;m{" "}
@@ -92,22 +92,22 @@ export default function Home() {
           </Scroll.Section>
         </motion.main>
 
-        <Scroll.Section className="text-blanco mx-4 lg:mx-10 my-28 lg:mt-60 lg:mb-60">
+        <Scroll.Section className="text-blanco my-28 h-96 mt-60 lg:h-[90vh] lg:mt-48">
           <Scroll.Item keyframes={keyframes.heading}>
-            <h1 className="text-center md:font-bold text-3xl lg:text-7xl leading-relaxed lg:leading-normal">
+            <h1 className="text-center md:font-bold text-3xl lg:text-7xl mt-1/2 leading-relaxed lg:leading-normal">
               I&#39;m a <span className="text-primario">Frontend</span>{" "}
               Developer
             </h1>
           </Scroll.Item>
         </Scroll.Section>
-        <Scroll.Section className="text-blanco mx-4 lg:mx-10 my-28 lg:mt-60 lg:mb-60">
+        <Scroll.Section className="text-blanco my-28 h-96 mt-60 lg:h-[90vh] lg:mt-48">
           <Scroll.Item keyframes={keyframes.heading}>
-            <h1 className="text-center md:font-bold text-3xl lg:text-7xl leading-relaxed lg:leading-normal">
+            <h1 className="text-center md:font-bold text-3xl lg:text-7xl mt-1/2 leading-relaxed lg:leading-normal">
               Also a Software <span className="text-primario">Engineer</span>
             </h1>
           </Scroll.Item>
         </Scroll.Section>
-        <Scroll.Section className="text-blanco mx-4 lg:mx-10 my-28 lg:mt-60 lg:mb-60">
+        <Scroll.Section className="text-blanco my-28 h-96 mt-60 lg:h-40 lg:mt-48">
           <Scroll.Item keyframes={keyframes.heading}>
             <h1 className="text-center md:font-bold text-3xl lg:text-7xl leading-relaxed lg:leading-normal">
               With several <span className="text-primario">TechStack</span> such
@@ -116,8 +116,8 @@ export default function Home() {
           </Scroll.Item>
         </Scroll.Section>
 
-        <Scroll.Section showOverflow className="h-[200vh]">
-          <div className="flex justify-center items-center sticky top-0">
+        <Scroll.Section showOverflow className="h-[150vh] mb-40">
+          <div className="flex justify-center items-center sticky top-[40vh]">
             <Scroll.Item keyframes={keyframes.container}>
               <div className="flex flex-col gap-4">
                 {skillItems.map((item, index) => (
@@ -135,7 +135,11 @@ export default function Home() {
           </div>
         </Scroll.Section>
 
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-5 my-5 lg:my-10">
+        <h4 className="text-center my-1 text-2xl lg:my-5">
+          Welcome to my Web Portofolio! <span>👋</span>
+        </h4>
+
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-5 my-5 mb-60 lg:my-10">
           <Link href="/projects">
             <a className="bg-primario w-36 h-12 rounded hover:opacity-80 transition flex justify-center items-center">
               See Projects
@@ -169,7 +173,7 @@ export default function Home() {
           ref={ref}
           initial={{ y: "10vh", opacity: 0 }}
           animate={animation}
-          transition={{ type: "spring", duration: 2.6, bounce: 0 }}
+          transition={{ type: "spring", duration: 1, bounce: 0.5 }}
           className="mx-4 lg:mx-10 mb-40 flex justify-center items-center"
         >
           <div className="bg-rellenos border border-bordes w-full sm:max-w-lg md:max-w-xl lg:max-w-4xl rounded text-blanco p-4 flex flex-col gap-4 md:flex-row">
@@ -183,13 +187,14 @@ export default function Home() {
             </div>
             <div className="md:w-3/4">
               <h2 className="text-xl mt-6 md:mt-0 md:mb-6">About Me</h2>
-              <article>
-                Hi, I&#39;m Ditya Athallah. I&#39;m a ungraduate college student
-                at Telkom University majoring in Informatics International
-                Class. Interested in software engineering since 2018, especially
-                in web development. I have learned web development for 2 years.
-                I usually work on the front-end side of the development...
-              </article>
+              <p className="relative w-full whitespace-normal">
+                Hi, I&#39;m Ditya Athallah. I&#39;m a ungraduated college
+                student at Telkom University majoring in Informatics
+                International Class. Interested in software engineering since
+                2018, especially in web development. I have learned web
+                development for 2 years. I usually work on the front-end side of
+                the development...
+              </p>
               <Link href="/about">
                 <a className="mt-6 border w-36 h-12 rounded hover:opacity-80 transition flex items-center justify-center gap-2">
                   Read More

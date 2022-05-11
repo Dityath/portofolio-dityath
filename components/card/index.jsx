@@ -26,7 +26,7 @@ function Card({ title, subtitle, photoSrc, photoAlt, href }) {
       ref={ref}
       initial={{ y: "10vh", opacity: 0 }}
       animate={animation}
-      transition={{ type: "spring", duration: 2.6, bounce: 0 }}
+      transition={{ type: "spring", duration: 1, bounce: 0.5 }}
       className="w-full h-36 sm:h-44 md:h-60 lg:h-[534px] mt-6 relative rounded overflow-hidden"
       onClick={() => router.push(href)}
     >
