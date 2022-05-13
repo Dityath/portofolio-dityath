@@ -8,6 +8,7 @@ import Layout from "../components/layout";
 
 import AboutGridSkill from "../components/aboutGrid/aboutGridSkill";
 import AboutGridTools from "../components/aboutGrid/aboutGridTools";
+import Link from "next/link";
 
 function About() {
   return (
@@ -61,14 +62,9 @@ function About() {
                 <li>Become first place in Devday: Hackathon 2021</li>
                 <li>
                   And many others.. (kindly check my cv{" "}
-                  <a
-                    target="_blank"
-                    href="https://docs.google.com/document/d/17l-AKEoQ4VcIav7urKfjdIU5s1q1Gc3kNICPABb6C84/edit?usp=sharing"
-                    rel="noreferrer"
-                    className="text-primario"
-                  >
-                    here
-                  </a>{" "}
+                  <Link href="/download/cv">
+                    <a className="text-primario">here</a>
+                  </Link>{" "}
                   for other achievements)
                 </li>
               </ul>{" "}

@@ -14,7 +14,7 @@ function Header({ page }) {
   return (
     <>
       <header className="flex justify-center sticky top-0 text-blanco px-4 lg:px-10 py-5 border-b border-bordes bg-fondos z-50">
-        <div className="flex justify-between items-center max-w-lg md:max-w-2xl lg:max-w-5xl w-full">
+        <div className="flex justify-between items-center max-w-lg md:max-w-4xl lg:max-w-6xl xl:max-w-7xl w-full">
           <p className="text-xl font-medium lg:text-2xl">Dityath</p>
           {nav ? (
             <button

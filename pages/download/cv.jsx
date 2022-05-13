@@ -61,6 +61,7 @@ function Cv() {
                 className="max-w-lg w-full p-2 bg-rellenos rounded"
                 name="email"
                 type="email"
+                required
               />
               <Field
                 placeHolder="Why you need my Cv?"
